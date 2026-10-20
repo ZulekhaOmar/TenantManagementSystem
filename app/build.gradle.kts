@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.legacy.kapt)
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -9,6 +10,7 @@ android {
     compileSdk {
         version = release(37)
     }
+
 
     defaultConfig {
         applicationId = "com.example.tenantmanagementsystem"
@@ -59,5 +61,8 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.8")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.8")
+
 
 }
