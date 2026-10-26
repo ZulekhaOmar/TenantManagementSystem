@@ -53,8 +53,11 @@ class LoginActivity : ComponentActivity() {
                 return@setOnClickListener
             }
 
+
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("EMAIL", email)
             startActivity(intent)
+
             finish()
         }
     }
